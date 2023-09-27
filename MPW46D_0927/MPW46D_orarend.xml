@@ -1,0 +1,16 @@
+<!DOCTYPE MPW46D_orarend SYSTEM "MPW46D_orarend_dtd.dtd">
+<?xml version="1.0" encoding="utf-8"?>
+
+<MPW46D_orarend>
+    <ora kod="" tipus="elmelet/gyakorlat">
+        <kurzusnev></kurzusnev>
+        <idopont>
+            <nap></nap>
+            <kezdopont></kezdopont>
+            <vegpont></vegpont>
+        </idopont>
+        <oktato></oktato>
+        <helyszin></helyszin>
+        <szak></szak>
+    </ora>
+</MPW46D_orarend>
