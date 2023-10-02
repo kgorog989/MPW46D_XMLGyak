@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<konferencia>
+    <cim>Üzleti előadás</cim>
+    <hallgatok>
+        <hallgato>
+            <nev>Minta Miklós</nev>
+            <lakcim>Miskolc</lakcim>
+        </hallgato>
+        <hallgato>
+            <nev>Nagy Vivien</nev>
+            <lakcim>Budapest</lakcim>
+        </hallgato>
+        <hallgato>
+            <nev>Kis Péter</nev>
+            <lakcim>Miskolc</lakcim>
+        </hallgato>
+        <hallgato>
+            <nev>Kis Ádám</nev>
+            <lakcim>Miskolc</lakcim>
+        </hallgato>
+        <hallgato>
+            <nev>Balogh Béla</nev>
+            <lakcim>Debrecen</lakcim>
+        </hallgato>
+        <hallgato>
+            <nev>Hallgató Hanga</nev>
+            <lakcim>Miskolc</lakcim>
+        </hallgato>
+    </hallgatok>
+    <helyszin>Miskolc, Egyetem</helyszin>
+    <eloado>
+        <nev>Dr. Előadó Péter</nev>
+        <adoszam>123456789</adoszam>
+        <lakcim>Miskolc</lakcim>
+    </eloado>
+    <datum>2023.12.12.</datum>
+</konferencia>

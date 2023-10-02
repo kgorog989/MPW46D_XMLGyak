@@ -1,16 +1,112 @@
-<!DOCTYPE MPW46D_orarend SYSTEM "MPW46D_orarend_dtd.dtd">
 <?xml version="1.0" encoding="utf-8"?>
 
 <MPW46D_orarend>
-    <ora kod="" tipus="elmelet/gyakorlat">
-        <kurzusnev></kurzusnev>
+    <ora kod="1" tipus="elmelet">
+        <kurzusnev>WEB technológiák</kurzusnev>
         <idopont>
-            <nap></nap>
-            <kezdopont></kezdopont>
-            <vegpont></vegpont>
+            <nap>hétfő</nap>
+            <kezdopont>14</kezdopont>
+            <vegpont>16</vegpont>
         </idopont>
-        <oktato></oktato>
-        <helyszin></helyszin>
-        <szak></szak>
+        <oktato>Agárdi Anita</oktato>
+        <helyszin>XXX. előadó</helyszin>
+        <szak>PTI</szak>
     </ora>
+
+    <ora kod="2" tipus="gyakorlat">
+        <kurzusnev>WEB technológiák</kurzusnev>
+        <idopont>
+            <nap>hétfő</nap>
+            <kezdopont>16</kezdopont>
+            <vegpont>18</vegpont>
+        </idopont>
+        <oktato>Agárdi Anita</oktato>
+        <helyszin>inf. 202.</helyszin>
+        <szak>PTI</szak>
+    </ora>
+
+    <ora kod="3" tipus="elmelet">
+        <kurzusnev>Mesterséges intelligencia</kurzusnev>
+        <idopont>
+            <nap>kedd</nap>
+            <kezdopont>10</kezdopont>
+            <vegpont>12</vegpont>
+        </idopont>
+        <oktato>Kunné Dr. Tamás Judit</oktato>
+        <helyszin>XXXII. előadó</helyszin>
+        <szak>PTI</szak>
+    </ora>
+
+    <ora kod="4" tipus="elmelet">
+        <kurzusnev>Adatkezelés XML-ben</kurzusnev>
+        <idopont>
+            <nap>kedd</nap>
+            <kezdopont>12</kezdopont>
+            <vegpont>14</vegpont>
+        </idopont>
+        <oktato>Dr. Bednarik László</oktato>
+        <helyszin>XXXII. előadó</helyszin>
+        <szak>PTI</szak>
+    </ora>
+
+    <ora kod="5" tipus="elmelet/gyakorlat">
+        <kurzusnev>Algoritmusok és vizsgálatuk</kurzusnev>
+        <idopont>
+            <nap>kedd</nap>
+            <kezdopont>14</kezdopont>
+            <vegpont>18</vegpont>
+        </idopont>
+        <oktato>Dr. Házy Attila</oktato>
+        <helyszin>A1/320.</helyszin>
+        <szak>PTI</szak>
+    </ora>
+
+    <ora kod="6" tipus="gyakorlat">
+        <kurzusnev>Adatkezelés XML-ben</kurzusnev>
+        <idopont>
+            <nap>szerda</nap>
+            <kezdopont>12</kezdopont>
+            <vegpont>14</vegpont>
+        </idopont>
+        <oktato>Dr. Bednarik László</oktato>
+        <helyszin>inf. 103.</helyszin>
+        <szak>PTI</szak>
+    </ora>
+
+    <ora kod="7" tipus="elmelet">
+        <kurzusnev>Vállalati információs rendszerek</kurzusnev>
+        <idopont>
+            <nap>szerda</nap>
+            <kezdopont>14</kezdopont>
+            <vegpont>16</vegpont>
+        </idopont>
+        <oktato>Dr. Sasvári Péter</oktato>
+        <helyszin>inf. 101.</helyszin>
+        <szak>PTI</szak>
+    </ora>
+
+    <ora kod="8" tipus="gyakorlat">
+        <kurzusnev>Vállalati információs rendszerek</kurzusnev>
+        <idopont>
+            <nap>szerda</nap>
+            <kezdopont>18</kezdopont>
+            <vegpont>20</vegpont>
+        </idopont>
+        <oktato>Dr. Sasvári Péter</oktato>
+        <helyszin>inf. 101.</helyszin>
+        <szak>PTI</szak>
+    </ora>
+
+    <ora kod="9" tipus="gyakorlat">
+        <kurzusnev>Mesterséges intelligencia</kurzusnev>
+        <idopont>
+            <nap>csütörtök</nap>
+            <kezdopont>10</kezdopont>
+            <vegpont>12</vegpont>
+        </idopont>
+        <oktato>Fazekas Levente</oktato>
+        <helyszin>I. előadó</helyszin>
+        <szak>PTI</szak>
+    </ora>
+
 </MPW46D_orarend>
