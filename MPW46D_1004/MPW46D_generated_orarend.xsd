@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<schema xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema">
+  <element name="orarend">
+    <complexType>
+      <sequence>
+        <element name="MPW46D_orarend">
+          <complexType>
+            <sequence>
+              <element maxOccurs="unbounded" name="ora">
+                <complexType>
+                  <sequence>
+                    <element name="kurzusnev" type="string" />
+                    <element name="idopont">
+                      <complexType>
+                        <sequence>
+                          <element name="nap" type="string" />
+                          <element name="kezdopont" type="unsignedByte" />
+                          <element name="vegpont" type="unsignedByte" />
+                        </sequence>
+                      </complexType>
+                    </element>
+                    <element name="oktato" type="string" />
+                    <element name="helyszin" type="string" />
+                    <element name="szak" type="string" />
+                  </sequence>
+                  <attribute name="kod" type="unsignedByte" use="required" />
+                  <attribute name="tipus" type="string" use="required" />
+                </complexType>
+              </element>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
+</schema>

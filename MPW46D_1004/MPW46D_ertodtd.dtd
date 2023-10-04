@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!ELEMENT MPW46D_modell (A, AB, B, C)>
+    <!ELEMENT A (b*, c)>
+        <!ELEMENT b (x, y)>
+            <!ELEMENT x (#PCDATA)>
+            <!ELEMENT y (#PCDATA)>
+        <!ELEMENT c (d, e)>
+            <!ELEMENT d (#PCDATA)>
+            <!ELEMENT e (#PCDATA)>
+
+<!ATTLIST A  a ID #REQUIRED>
+<!ATTLIST B  a ID #REQUIRED>
