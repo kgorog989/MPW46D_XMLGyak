@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!ELEMENT kurzusfelvetel (kurzusadatok*)>
+    <!ELEMENT kurzusadatok (kurzus*, idopont+, (oktato|oraado)?)>
+        <!ELEMENT kurzus (#PCDATA)>
+        <!ELEMENT idopont (kezdet?, veg?, nap?)>
+            <!ELEMENT kezdet (#PCDATA)>
+            <!ELEMENT veg (#PCDATA)>
+            <!ELEMENT nap (#PCDATA)>
+        <!ELEMENT oktato (#PCDATA)>
+        <!ELEMENT oraado (#PCDATA)>
+
+<!ATTLIST kurzusadatok jovahagyas (igen|nem) "nem">
+<!ATTLIST nap nap (hétfő | kedd | szerda | csütörtök | péntek) "hétfő">

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE MPW46D_modell SYSTEM "MPW46D_ertodtd.dtd">
+
+<MPW46D_modell>
+    <A a="Aref">
+        <b>
+            <x>elementX</x>
+            <y>elementY</y>
+        </b>
+        <c>
+            <d>elementD</d>
+            <e>elementE</e>
+        </c>
+    </A>
+
+    <AB Aref="Aref" Bref="Bref">
+        <cAB>key</cAB>
+    </AB>  
+
+    <B a="Bref" Cref="Cref">
+        <bB>
+            <xb>elso</xb>
+            <yb>masodik</yb>
+        </bB>
+    </B>
+
+    <C a="Cref">
+        <b_in_C>elementB</b_in_C>
+    </C>    
+</MPW46D_modell>

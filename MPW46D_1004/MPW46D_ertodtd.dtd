@@ -8,6 +8,18 @@
         <!ELEMENT c (d, e)>
             <!ELEMENT d (#PCDATA)>
             <!ELEMENT e (#PCDATA)>
+    <!ELEMENT AB (cAB)> 
+        <!ELEMENT cAB (#PCDATA)>
+    <!ELEMENT B (bB)>
+        <!ELEMENT bB (xb, yb)>
+                <!ELEMENT xb (#PCDATA)>
+                <!ELEMENT yb (#PCDATA)>
+    <!ELEMENT C (b_in_C)>       
+        <!ELEMENT b_in_C (#PCDATA)>
 
 <!ATTLIST A  a ID #REQUIRED>
 <!ATTLIST B  a ID #REQUIRED>
+<!ATTLIST C  a ID #REQUIRED>
+<!ATTLIST AB Aref IDREF #REQUIRED>
+<!ATTLIST AB Bref IDREF #REQUIRED>
+<!ATTLIST B Cref IDREF #REQUIRED>

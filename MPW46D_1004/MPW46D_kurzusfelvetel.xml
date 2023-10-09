@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE kurzusfelvetel SYSTEM "MPW46D_kurzusfelvetel.dtd">
+
+<kurzusfelvetel>
+    <kurzusadatok>
+        <kurzus>Adatkezelés XML-ben</kurzus>
+        <idopont>
+            <kezdet>12</kezdet>
+            <veg>14</veg>
+            <nap>kedd</nap>
+        </idopont>
+        <oktato>Dr. Bednarik László</oktato>
+    </kurzusadatok>
+</kurzusfelvetel>
