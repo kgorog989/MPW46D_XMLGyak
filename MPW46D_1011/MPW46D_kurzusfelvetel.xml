@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<MPW46D_kurzusfelvetel tanev="2023/24 I." egyetem="ME" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="MPW46D_kurzusfelvetel.xsd">
+    <hallgato evf="3">
+        <hnev>Görög Krisztina Erzsébet</hnev>
+        <szulev>2002-06-14</szulev>
+        <szak>programtervező informatikus</szak>
+    </hallgato>
+
+    <kurzusok>
+        <kurzus id="MPW46D" jovahagyas="igen">
+            <kurzusnev></kurzusnev>
+            <kredit></kredit>
+            <hely></hely>
+            <idopont>
+                <nap>hétfő</nap>
+                <kezdopont>14</kezdopont>
+                <vegpont>16</vegpont>
+            </idopont>
+            <oktato></oktato>
+        </kurzus>
+    </kurzusok>
+</MPW46D_kurzusfelvetel>

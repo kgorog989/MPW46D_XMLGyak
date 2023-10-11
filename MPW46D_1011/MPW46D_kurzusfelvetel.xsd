@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+<xs:element name="MPW46D_kurzusfelvetel">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="hallgato" type="hallgatoTipus" minOxxurs="0" maxOccurs="1"/>
+            <xs:element name="kurzusok" type="kurzusokTipus" minOxxurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:complexType name="hallgatoTipus">
+    <xs:sequence>
+        <xs:element name="hnev" type="xs:string"/>
+        <xs:element name="szulev" type="xs:string"/>
+        <xs:element name="szak" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="evf" type="xs:int" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="kurzusokTipus">
+    <xs:sequence>
+        <xs:element name="kurzus" type="kurzusTipus"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="kurzusTipus">
+    <xs:sequence>
+        <xs:element name="kurzusnev" type="xs:string"/>
+        <xs:element name="kredit" type="xs:int"/>
+        <xs:element name="hely" type="xs:string"/>
+        <xs:element name="idopont" type="xs:string"/>
+        <xs:element name="oktato" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:int" use="required"/>
+    <xs:attribute name="jovahagyas" type="xs:int" use="required"/>
+</xs:complexType>
+
+<xs:simpleType name="oraTipusTipus">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="elmelet"/>
+        <xs:enumeration value="gyakorlat"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="idopontTipus">
+    <xs:sequence>
+        <xs:element name="nap" type="napTipus"/>
+        <xs:element name="kezdopont" type="idopontOraTipus"/>
+        <xs:element name="vegpont" type="idopontOraTipus"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="napTipus">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="hétfő"/>
+        <xs:enumeration value="kedd"/>
+        <xs:enumeration value="szerda"/>
+        <xs:enumeration value="csütörtök"/>
+        <xs:enumeration value="péntek"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="idopontOraTipus">
+    <xs:restriction base="xs:positiveInteger">
+        <xs:enumeration value="8"/>
+        <xs:enumeration value="20"/>
+    </xs:restriction>
+</xs:simpleType>
+
+</xs:schema>
