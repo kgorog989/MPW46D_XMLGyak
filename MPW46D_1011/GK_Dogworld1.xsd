@@ -15,18 +15,18 @@
 <xs:element name="konyvek">
     <xs:complexType>
         <xs:sequence>
-            <xs:element name="konyv" minOxxurs="0" maxOccurs="unbounded"/>
+            <xs:element name="konyv" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element ref="cim" minOxxurs="0" maxOccurs="1"/>
+                        <xs:element ref="cim" minOccurs="0" maxOccurs="1"/>
                         <xs:element ref="szerzo"/>
-                        <xs:element name="szereplo" type="xs:string" minOxxurs="0" maxOccurs="20"/>
+                        <xs:element name="szereplo" type="xs:string" minOccurs="0" maxOccurs="20"/>
 
                             <xs:complexType>
                                 <xs:sequence>
                                     <!--egyszerű típusokra a ref attributumon keresztül hivatkozhatunk-->
                                     <xs:element ref="nev"/>
-                                    <xs:element ref="baratja" minOxxurs="0" maxOccurs="5"/>
+                                    <xs:element ref="baratja" minOccurs="0" maxOccurs="5"/>
                                     <xs:element ref="szuletett"/>
                                     <xs:element ref="jellemzes"/>
                                 </xs:sequence>
@@ -34,8 +34,9 @@
                         </xs:element>
                     </xs:sequence>
                     <xs:attribute ref="isbn"/>
-                
                 </xs:complexType>
         </xs:sequence>
     </xs:complexType>
 </xs:element>
+
+</xs:schema>
