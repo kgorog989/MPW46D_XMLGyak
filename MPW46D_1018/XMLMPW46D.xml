@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Fesztivál_MPW46D xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="XMLSchemaMPW46D.xsd">
+    <Fesztivál FESZ_ID="">
+        <név></név>
+        <helyszín></helyszín>
+        <év></év>
+    </Fesztivál>
+
+    <Fellépő FEL_ID="" FESZ_IDREF="">
+        <név></név>
+        <ország></ország>
+        <díj></díj>
+    </Fellépő>
+
+    <Tulajdonos T_ID="">
+        <név></név>
+        <adószám></adószám>
+        <alapítás></alapítás>
+        <bevétel></bevétel>
+    </Tulajdonos>
+
+    <Résztvevő R_ID="" FESZ_IDREF="">
+        <név></név>
+        <diákigazolvány></diákigazolvány>
+        <lakcím>
+            <település></település>    
+            <utca></utca>
+            <házszám></házszám>
+        </lakcím>
+    </Résztvevő>
+
+    <közvélemény K_ID="" R_IDREF="" NY_IDREF="">
+        <kérdező></kérdező>
+    </közvélemény>
+
+    <Nyelvtudás NY_ID="">
+        <nyelv></nyelv>    
+        <szint></szint>
+    </Nyelvtudás>
+
+    <Alkalmazott A_ID="" B_IDREF="">
+        <név></név>
+        <műszak></műszak>
+        <fizetés></fizetés>
+    </Alkalmazott>
+
+    <Bár B_ID="" FESZ_IDREF="">   
+        <név></név>
+        <ital></ital>
+        <cég></cég>
+    </Bár>
+
+</Fesztivál_MPW46D>

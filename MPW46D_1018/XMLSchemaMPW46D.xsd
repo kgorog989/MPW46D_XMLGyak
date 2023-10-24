@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+<!-- Egyszerű típusok kigyűjtése, saját típusok meghatározása, megszorítás -->
+
+    <xs:element name="név" type="xs:string"/>
+    <xs:element name="helyszín" type="xs:string"/>
+    <xs:element name="év" type="xs:int"/>
+    <xs:element name="ország" type="xs:string"/>
+    <xs:element name="díj" type="xs:int"/>
+    <xs:element name="adószám" type="xs:int"/>
+    <xs:element name="alapítás" type="xs:int"/>
+    <xs:element name="bevétel" type="xs:int"/>
+    <xs:element name="diákigazolvány" type="xs:int"/>
+    <xs:element name="település" type="xs:string"/>
+    <xs:element name="utca" type="xs:string"/>
+    <xs:element name="házszám" type="xs:string"/>
+    <xs:element name="kérdező" type="xs:string"/>
+    <xs:element name="nyelv" type="xs:string"/>
+    <xs:element name="szint" type="xs:string"/>
+    <xs:element name="műszak" type="xs:string"/>
+    <xs:element name="fizetés" type="xs:int"/>
+    <xs:element name="ital" type="xs:string"/>
+    <xs:element name="cég" type="xs:string"/>
+
+
+<xs:element name="Fesztivál_MPW46D">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="Fesztivál" type="fesztivalTipus" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="Fellépő" type="fellepoTipus" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="Tulajdonos" type="tulajdonosTipus" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="Résztvevő" type="resztvevoTipus" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="közvélemény" type="kozvelemenyTipus" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="Nyelvtudás" type="nyelvtudasTipus" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="Alkalmazott" type="alkalmazottTipus" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="Bár" type="barTipus" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+
+<xs:complexType name="fesztivalTipus">
+    <xs:sequence>
+        <xs:element ref="név"/>
+        <xs:element ref="helyszín"/>
+        <xs:element ref="év"/>
+    </xs:sequence>
+    <xs:attribute ref="FESZ_ID"/>
+</xs:complexType>
+
+<xs:complexType name="fellepoTipus">
+    <xs:sequence>
+        <xs:element ref="név"/>
+        <xs:element ref="ország"/>
+        <xs:element ref="díj"/>
+    </xs:sequence>
+    <xs:attribute ref="FEL_ID"/>
+    <xs:attribute ref="FESZ_IDREF"/>
+</xs:complexType>
+
+<xs:complexType name="tulajdonosTipus">
+    <xs:sequence>
+        <xs:element ref="név"/>
+        <xs:element ref="adószám"/>
+        <xs:element ref="alapítás"/>
+        <xs:element ref="bevétel"/>
+    </xs:sequence>
+    <xs:attribute ref="T_ID"/>
+</xs:complexType>
+
+<xs:complexType name="resztvevoTipus">
+    <xs:sequence>
+        <xs:element ref="név"/>
+        <xs:element ref="diákigazolvány"/>
+        <xs:element name="lakcím" type="lakcimTipus" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute ref="R_ID"/>
+    <xs:attribute ref="FESZ_IDREF"/>
+</xs:complexType>
+
+<xs:complexType name="kozvelemenyTipus">
+    <xs:sequence>
+        <xs:element ref="kérdező"/>
+    </xs:sequence>
+    <xs:attribute ref="K_ID"/>
+    <xs:attribute ref="R_IDREF"/>
+    <xs:attribute ref="NY_IDREF"/>
+</xs:complexType>
+
+<xs:complexType name="nyelvtudasTipus">
+    <xs:sequence>
+        <xs:element ref="nyelv"/>
+        <xs:element ref="szint"/>
+    </xs:sequence>
+    <xs:attribute ref="NY_ID"/>
+</xs:complexType>
+
+<xs:complexType name="alkalmazottTipus">
+    <xs:sequence>
+        <xs:element ref="név"/>
+        <xs:element ref="műszak" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="fizetés"/>
+    </xs:sequence>
+    <xs:attribute ref="A_ID"/>
+    <xs:attribute ref="B_IDREF"/>
+</xs:complexType>
+
+<xs:complexType name="barTipus">
+    <xs:sequence>
+        <xs:element ref="név"/>
+        <xs:element ref="ital" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="cég"/>
+    </xs:sequence>
+    <xs:attribute ref="B_ID"/>
+    <xs:attribute ref="FESZ_IDREF"/>
+</xs:complexType>
+
+<xs:complexType name="lakcimTipus">
+    <xs:sequence>
+        <xs:element ref="település"/>
+        <xs:element ref="utca"/>
+        <xs:element ref="házszám"/>
+    </xs:sequence>
+</xs:complexType>
+
+<!-- kulcsok-->
+
+    <xs:attribute name="FESZ_ID" type="xs:ID"/>
+    <xs:attribute name="FEL_ID" type="xs:ID"/>
+    <xs:attribute name="T_ID" type="xs:ID"/>
+    <xs:attribute name="R_ID" type="xs:ID"/>
+    <xs:attribute name="K_ID" type="xs:ID"/>
+    <xs:attribute name="NY_ID" type="xs:ID"/>
+    <xs:attribute name="A_ID" type="xs:ID"/>
+    <xs:attribute name="B_ID" type="xs:ID"/>
+
+    <xs:attribute name="FESZ_IDREF" type="xs:IDREF"/>
+    <xs:attribute name="R_IDREF" type="xs:IDREF"/>
+    <xs:attribute name="NY_IDREF" type="xs:IDREF"/>
+    <xs:attribute name="B_IDREF" type="xs:IDREF"/>    
+
+</xs:schema>
