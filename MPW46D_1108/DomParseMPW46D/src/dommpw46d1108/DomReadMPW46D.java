@@ -12,7 +12,7 @@ public class DomReadMPW46D {
 
 	public static void main(String[] args) {
 		try {
-			File inputFile = new File("MPW46D_kurzusfelvetel.xml");
+			File inputFile = new File("MPW46D_1108/DomParseMPW46D/MPW46D_kurzusfelvetel.xml");
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 			Document doc = dBuilder.parse(inputFile);
@@ -24,40 +24,48 @@ public class DomReadMPW46D {
 			System.out.println("----------------------------");
 
 			for (int temp = 0; temp < hallgatoList.getLength(); temp++) {
-				Node nNode = hallgatoList.item(temp);
-				Element eEl = (Element) nNode;
-				System.out.println("\n<start> " + nNode.getNodeName() + " {evf : " + eEl.getAttribute("evf") + "}");
+				Node hallgatoNode = hallgatoList.item(temp);
+				Element hElement = (Element) hallgatoNode;
+				System.out.println("\n<start> " + hallgatoNode.getNodeName() + " {evf : " + hElement.getAttribute("evf") + "}");
 
-				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-					Element eElement = (Element) nNode;
+				if (hallgatoNode.getNodeType() == Node.ELEMENT_NODE) {
+					Element kElement = (Element) hallgatoNode;
 					System.out.println(
-							" nev: " + eElement.getElementsByTagName("hnev").item(0).getTextContent());
+							" nev: " + kElement.getElementsByTagName("hnev").item(0).getTextContent());
 					System.out.println(
-							" szulev: " + eElement.getElementsByTagName("szulev").item(0).getTextContent());
+							" szulev: " + kElement.getElementsByTagName("szulev").item(0).getTextContent());
 					System.out.println(
-							" szak: " + eElement.getElementsByTagName("szak").item(0).getTextContent());
+							" szak: " + kElement.getElementsByTagName("szak").item(0).getTextContent());
 				}
-				System.out.println("<end> " + nNode.getNodeName());
+				System.out.println("<end> " + hallgatoNode.getNodeName());
 			}
 			
 			for (int temp = 0; temp < kurzusokList.getLength(); temp++) {
-				Node nNode = kurzusokList.item(temp);
-				System.out.println("\n<start> " + nNode.getNodeName());
+				Node kurzusokNode = kurzusokList.item(temp);
+				System.out.println("\n<start> " + kurzusokNode.getNodeName());
 
-				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-					for (int tempp = 0; temp < kurzusList.getLength(); temp++) {
-						Node nNodee = kurzusList.item(tempp);
-						System.out.println("\n <start> " + nNodee.getNodeName());
-						if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-							Element eElement = (Element) nNode;
+				if (kurzusokNode.getNodeType() == Node.ELEMENT_NODE) {
+					for (int t = 0; t < kurzusList.getLength(); t++) {
+						Node kurzusNode = kurzusList.item(t);
+						if (kurzusokNode.getNodeType() == Node.ELEMENT_NODE) {
+							Element kElement = (Element) kurzusNode;
+							System.out.println("\n <start> " + kurzusNode.getNodeName() + " {id: " + kElement.getAttribute("id") + ", jovahagyas: " + kElement.getAttribute("jovahagyas") + "}");
+
 							System.out.println(
-									"  kurzusnev: " + eElement.getElementsByTagName("kurzusnev").item(0).getTextContent());
-							
+									"  kurzusnev: " + kElement.getElementsByTagName("kurzusnev").item(0).getTextContent());
+							System.out.println("  kredit: " + kElement.getElementsByTagName("kredit").item(0).getTextContent());
+							System.out.println("  hely: " + kElement.getElementsByTagName("hely").item(0).getTextContent());
+							System.out.println("   <start> idopont");
+							System.out.println("    nap: " + kElement.getElementsByTagName("nap").item(0).getTextContent());
+							System.out.println("    kezdopont: " + kElement.getElementsByTagName("kezdopont").item(0).getTextContent());
+							System.out.println("    vegpont: " + kElement.getElementsByTagName("vegpont").item(0).getTextContent());
+							System.out.println("   <end> idopont");
+							System.out.println("  oktato: " + kElement.getElementsByTagName("oktato").item(0).getTextContent());
 						}
-						System.out.println("  <end> " + nNodee.getNodeName());
+						System.out.println(" <end> " + kurzusNode.getNodeName());
 					}
 				}
-				System.out.println(" <end> " + nNode.getNodeName());
+				System.out.println("<end> " + kurzusokNode.getNodeName());
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
