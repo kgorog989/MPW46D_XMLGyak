@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><MPW46D_kurzusfelvetel xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" egyetem="ME" tanev="2023/24 I." xs:noNamespaceSchemaLocation="MPW46D_kurzusfelvetel.xsd">
+    <hallgato evf="3">
+        <hnev>Görög Krisztina Erzsébet</hnev>
+        <szulev>2002-06-14</szulev>
+        <szak>programtervező informatikus</szak>
+    </hallgato>
+
+    <kurzusok>
+        <kurzus id="GEIAL331-B" jovahagyas="igen">
+            <kurzusnev>WEB technológiák I.</kurzusnev>
+            <nyelv>nemet</nyelv>
+            <kredit>5</kredit>
+            <hely>XXX.</hely>
+            <idopont>
+                <nap>hétfő</nap>
+                <kezdopont>14</kezdopont>
+                <vegpont>16</vegpont>
+            </idopont>
+            <oktato/>
+        <oktato>The teacher was missing here.</oktato></kurzus>
+
+        <kurzus id="GEIAL331-B gy" jovahagyas="igen">
+            <kurzusnev>WEB technológiák I.</kurzusnev>
+            <nyelv>magyar</nyelv>
+            <kredit>5</kredit>
+            <hely>inf/202.</hely>
+            <idopont>
+                <nap>hétfő</nap>
+                <kezdopont>16</kezdopont>
+                <vegpont>18</vegpont>
+            </idopont>
+            <oktato/>
+        <oktato>The teacher was missing here.</oktato></kurzus>
+
+        <kurzus id="GEIAK130-B" jovahagyas="igen">
+            <kurzusnev>Mesterséges intelligencia</kurzusnev>
+            <nyelv>magyar</nyelv>
+            <kredit>5</kredit>
+            <hely>XXXII.</hely>
+            <idopont>
+                <nap>kedd</nap>
+                <kezdopont>10</kezdopont>
+                <vegpont>12</vegpont>
+            </idopont>
+            <oktato>Kunné Dr. Tamás Judit</oktato>
+        </kurzus>
+
+        <kurzus id="GEIAL332-B" jovahagyas="igen">
+            <kurzusnev>Adatkezelés XML-ben</kurzusnev>
+            <nyelv>nemet</nyelv>
+            <kredit>5</kredit>
+            <hely>XXXII.</hely>
+            <idopont>
+                <nap>kedd</nap>
+                <kezdopont>12</kezdopont>
+                <vegpont>14</vegpont>
+            </idopont>
+            <oktato>Dr. Bednarik László</oktato>
+        </kurzus>
+
+        <kurzus id="GEMAK234-B" jovahagyas="igen">
+            <kurzusnev>Algoritmusok és vizsgálatuk</kurzusnev>
+            <nyelv>francia</nyelv>
+            <kredit>5</kredit>
+            <hely>A1/320.</hely>
+            <idopont>
+                <nap>kedd</nap>
+                <kezdopont>14</kezdopont>
+                <vegpont>18</vegpont>
+            </idopont>
+            <oktato>Dr. Házy Attila</oktato>
+        </kurzus>
+
+        <kurzus id="GEIAL332-B" jovahagyas="igen">
+            <kurzusnev>Adatkezelés XML-ben</kurzusnev>
+            <nyelv>nemet</nyelv>
+            <kredit>5</kredit>
+            <hely>inf/103.</hely>
+            <idopont>
+                <nap>szerda</nap>
+                <kezdopont>12</kezdopont>
+                <vegpont>14</vegpont>
+            </idopont>
+            <oktato>Dr. Bednarik László</oktato>
+        </kurzus>
+
+        <kurzus id="GEIAL315-B" jovahagyas="igen">
+            <kurzusnev>Vállalati információs rendszerek fejlesztése</kurzusnev>
+            <nyelv>magyar</nyelv>
+            <kredit>5</kredit>
+            <hely>inf/101.</hely>
+            <idopont>
+                <nap>szerda</nap>
+                <kezdopont>14</kezdopont>
+                <vegpont>16</vegpont>
+            </idopont>
+            <oktato>Dr. Sasvári Péter</oktato>
+        </kurzus>
+
+        <kurzus id="GEIAL315-B gy" jovahagyas="igen">
+            <kurzusnev>Vállalati információs rendszerek fejlesztése</kurzusnev>
+            <nyelv>magyar</nyelv>
+            <kredit>5</kredit>
+            <hely>inf/101.</hely>
+            <idopont>
+                <nap>szerda</nap>
+                <kezdopont>18</kezdopont>
+                <vegpont>20</vegpont>
+            </idopont>
+            <oktato/>
+        <oktato>The teacher was missing here.</oktato></kurzus>
+
+        <kurzus id="GEIAK130-B gy" jovahagyas="igen">
+            <kurzusnev>Mesterséges intelligencia</kurzusnev>
+            <nyelv>nemet</nyelv>
+            <kredit>5</kredit>
+            <hely>I.</hely>
+            <idopont>
+                <nap>csütörtök</nap>
+                <kezdopont>10</kezdopont>
+                <vegpont>12</vegpont>
+            </idopont>
+            <oktato>Fazekas Levente</oktato>
+        </kurzus>
+    </kurzusok>
+</MPW46D_kurzusfelvetel>
