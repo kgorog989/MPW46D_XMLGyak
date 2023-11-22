@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+<!--egyszerű típusok, kigyűjtése hivatkozás céljából-->
+
+    <xs:element name="keresztnev" type="xs:string"/>
+    <xs:element name="vezeteknev" type="xs:string"/>
+    <xs:element name="becenev" type="xs:string"/>
+    <xs:element name="kor" type="xs:int"/>
+
+<xs:element name="class">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="student" type="studentTipus" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:complexType name="studentTipus">
+    <xs:sequence>
+        <xs:element ref="keresztnev"/>
+        <xs:element ref="vezeteknev"/>
+        <xs:element ref="becenev"/>
+        <xs:element ref="kor"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string"/>
+</xs:complexType>
+
+</xs:schema>
