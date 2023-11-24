@@ -19,21 +19,21 @@
         <keresztnev>Tamás</keresztnev>
         <vezeteknev>Kiss</vezeteknev>
         <becenev>Tomi</becenev>
-        <kor>22</kor>
+        <kor>18</kor>
     </student>
 
-    <student id="">
+    <student>
         <keresztnev>Hajnalka</keresztnev>
         <vezeteknev>Zoltán</vezeteknev>
         <becenev>Hajni</becenev>
         <kor>23</kor>
     </student>
 
-    <student id="">
+    <student>
         <keresztnev>Katalin</keresztnev>
         <vezeteknev>Balogh</vezeteknev>
         <becenev>Kati</becenev>
-        <kor>22</kor>
+        <kor>16</kor>
     </student>
 
     <student id="06">
@@ -43,7 +43,7 @@
         <kor>25</kor>
     </student>
 
-    <student id="">
+    <student>
         <keresztnev>Mária</keresztnev>
         <vezeteknev>Horváth</vezeteknev>
         <becenev>Mari</becenev>

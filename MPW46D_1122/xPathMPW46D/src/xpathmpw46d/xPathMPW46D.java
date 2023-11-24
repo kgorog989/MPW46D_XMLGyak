@@ -33,7 +33,19 @@ public class xPathMPW46D {
 
          XPath xPath =  XPathFactory.newInstance().newXPath();
 
-         String expression = "/class/student";	        
+         String expression = "/class/student";
+         //String expression = "/class/student[@id='02']";  
+         //String expression = "//student";
+         //String expression = "/class/student[2]";
+         //String expression = "/class/student[last()]";	
+         //String expression = "/class/student[last()-1]";	
+         //String expression = "/class/student[position()<3]";
+         //String expression = "/class/*";	
+         //String expression = "/class/student[@*]";
+         //String expression = "//*";	
+         //String expression = "/class/student[kor<'20']";	
+         //String expression = "/class/student/vezeteknev|keresztnev";
+         
          NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(
             doc, XPathConstants.NODESET);
 
@@ -66,6 +78,20 @@ public class xPathMPW46D {
                   .getTextContent());
             }
          }
+
+         //for printing out the contents of "/class/student/vezeteknev|keresztnev"
+         /* for (int i = 0; i < nodeList.getLength(); i++) {
+            Node nNode = nodeList.item(i);
+            System.out.println("\nName: " + nNode.getTextContent());
+      } */
+
+         //for printing out the contents of "//*"
+        /* for (int i = 0; i < nodeList.getLength(); i++) {
+         Node nNode = nodeList.item(i);
+         System.out.println("\nElement: " + nNode.getNodeName());
+         System.out.println("Content: " + nNode.getTextContent());
+      } */
+     
       } catch (ParserConfigurationException e) {
          e.printStackTrace();
       } catch (SAXException e) {
