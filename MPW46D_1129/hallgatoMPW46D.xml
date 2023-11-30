@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<class xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="studentMPW46D.xsd">
+    <student id="01">
+        <keresztnev>Krisztina Erzsébet</keresztnev>
+        <vezeteknev>Görög</vezeteknev>
+        <becenev>Kriszti</becenev>
+        <kor>21</kor>
+        <osztondij>600000</osztondij>
+    </student>
+
+    <student id="02">
+        <keresztnev>Evelin</keresztnev>
+        <vezeteknev>Kiss</vezeteknev>
+        <becenev>Evi</becenev>
+        <kor>21</kor>
+        <osztondij>300000</osztondij>
+    </student>
+
+    <student id="03">
+        <keresztnev>Tamás</keresztnev>
+        <vezeteknev>Kiss</vezeteknev>
+        <becenev>Tomi</becenev>
+        <kor>18</kor>
+        <osztondij>1000000</osztondij>
+    </student>
+
+    <student>
+        <keresztnev>Hajnalka</keresztnev>
+        <vezeteknev>Zoltán</vezeteknev>
+        <becenev>Hajni</becenev>
+        <kor>23</kor>
+        <osztondij>50000</osztondij>
+    </student>
+
+    <student>
+        <keresztnev>Katalin</keresztnev>
+        <vezeteknev>Balogh</vezeteknev>
+        <becenev>Kati</becenev>
+        <kor>16</kor>
+        <osztondij>200000</osztondij>
+    </student>
+
+    <student id="06">
+        <keresztnev>Péter</keresztnev>
+        <vezeteknev>Kovács</vezeteknev>
+        <becenev>Peti</becenev>
+        <kor>25</kor>
+        <osztondij>800000</osztondij>
+    </student>
+
+    <student>
+        <keresztnev>Mária</keresztnev>
+        <vezeteknev>Horváth</vezeteknev>
+        <becenev>Mari</becenev>
+        <kor>24</kor>
+        <osztondij>100000</osztondij>
+    </student>
+
+    <student id="09">
+        <keresztnev>Gabriella</keresztnev>
+        <vezeteknev>Tamás</vezeteknev>
+        <becenev>Gabi</becenev>
+        <kor>22</kor>
+        <osztondij>500000</osztondij>
+    </student>
+
+    <student id="10">
+        <keresztnev>Péter</keresztnev>
+        <vezeteknev>Nagy</vezeteknev>
+        <becenev>Peti</becenev>
+        <kor>20</kor>
+        <osztondij>400000</osztondij>
+    </student>
+
+</class>
