@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<MPW46D_cukrászda xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="XMLSchemaMPW46D.xsd">
+    <dolgozó DID="" dolgozó_CID="">
+        <név></név>    
+        <fizetés></fizetés>
+        <beosztás></beosztás>
+    </dolgozó>
+
+    <igazgató IID="">
+        <név></név>    
+        <fizetés></fizetés>
+        <elérhetőség></elérhetőség>
+    </igazgató>
+
+    <cukrászda CID="">
+        <név></név>
+        <cím>
+            <város></város>
+            <irányítószám></irányítószám>
+            <utca></utca>
+            <házszám></házszám>
+        </cím>
+    </cukrászda>
+
+    <árul árul_CID="" árul_SID=""></árul>
+
+    <sütemény SID="">
+        <név></név>
+        <egységár></egységár>
+        <allergének></allergének>
+    </sütemény>
+
+    <rendel rendel_SID="" rendel_MID="">
+        <darabszám></darabszám>
+        <összeg></összeg>
+    </rendel>
+
+    <megrendelő MID="">
+        <név></név>
+        <elérhetőség></elérhetőség>    
+    </megrendelő>
+
+    <rendezvény RID="" rendezvény_MID="" rendezvény_CID="">
+        <kezdés></kezdés>
+        <helyszín>
+            <város></város>
+            <irányítószám></irányítószám>
+            <utca></utca>
+            <házszám></házszám>
+        </helyszín>    
+    </rendezvény>
+
+</MPW46D_cukrászda>

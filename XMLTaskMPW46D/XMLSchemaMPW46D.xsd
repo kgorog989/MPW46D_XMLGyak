@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+<!-- Egyszerű típusok kigyűjtése, saját típusok meghatározása, megszorítás -->
+
+    <xs:element name="név" type="xs:string"/>
+    <xs:element name="fizetés" type="xs:int"/>
+    <xs:element name="beosztás" type="xs:string"/>
+    <xs:element name="elérhetőség" type="xs:string"/>
+    <xs:element name="város" type="xs:string"/>
+    <xs:element name="irányítószám" type="xs:string"/>
+    <xs:element name="utca" type="xs:string"/>
+    <xs:element name="házszám" type="xs:string"/>
+    <xs:element name="egységár" type="xs:int"/>
+    <xs:element name="allergének" type="xs:string"/>
+    <xs:element name="darabszám" type="xs:int"/>
+    <xs:element name="összeg" type="xs:int"/>
+    <xs:element name="kezdés" type="xs:string"/>
+
+
+<xs:element name="MPW46D_cukrászda">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="dolgozó" type="dolgozóTipus" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="igazgató" type="igazgatóTipus" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="cukrászda" type="cukrászdaTipus" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="árul" type="árulTipus" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="sütemény" type="süteményTipus" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="rendel" type="rendelTipus" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="megrendelő" type="megrendelőTipus" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="rendezvény" type="rendezvényTipus" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+
+<xs:complexType name="dolgozóTipus">
+    <xs:sequence>
+        <xs:element ref="név"/>
+        <xs:element ref="fizetés"/>
+        <xs:element ref="beosztás"/>
+    </xs:sequence>
+    <xs:attribute ref="DID"/>
+    <xs:attribute ref="dolgozó_CID"/>
+</xs:complexType>
+
+<xs:complexType name="igazgatóTipus">
+    <xs:sequence>
+        <xs:element ref="név"/>
+        <xs:element ref="fizetés"/>
+        <xs:element ref="elérhetőség" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute ref="IID"/>
+</xs:complexType>
+
+<xs:complexType name="cukrászdaTipus">
+    <xs:sequence>
+        <xs:element ref="név"/>
+        <xs:element name="cím" type="címTipus"/>
+    </xs:sequence>
+    <xs:attribute ref="CID"/>
+</xs:complexType>
+
+<xs:complexType name="árulTipus">
+    <xs:attribute ref="árul_CID"/>
+    <xs:attribute ref="árul_SID"/>
+</xs:complexType>
+
+<xs:complexType name="süteményTipus">
+    <xs:sequence>
+        <xs:element ref="név"/>
+        <xs:element ref="egységár"/>
+        <xs:element ref="allergének" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute ref="SID"/>
+</xs:complexType>
+
+<xs:complexType name="rendelTipus">
+    <xs:sequence>
+        <xs:element ref="darabszám"/>
+        <xs:element ref="összeg"/>
+    </xs:sequence>
+    <xs:attribute ref="rendel_SID"/>
+    <xs:attribute ref="rendel_MID"/>
+</xs:complexType>
+
+<xs:complexType name="megrendelőTipus">
+    <xs:sequence>
+        <xs:element ref="név"/>
+        <xs:element ref="elérhetőség" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute ref="MID"/>
+</xs:complexType>
+
+<xs:complexType name="rendezvényTipus">
+    <xs:sequence>
+        <xs:element ref="kezdés"/>
+        <xs:element name="helyszín" type="címTipus"/>
+    </xs:sequence>
+    <xs:attribute ref="RID"/>
+    <xs:attribute ref="rendezvény_MID"/>
+    <xs:attribute ref="rendezvény_CID"/>
+</xs:complexType>
+
+<xs:complexType name="címTipus">
+    <xs:sequence>
+        <xs:element ref="város"/>
+        <xs:element ref="irányítószám"/>
+        <xs:element ref="utca"/>
+        <xs:element ref="házszám"/>
+    </xs:sequence>
+</xs:complexType>
+
+<!-- kulcsok-->
+
+    <xs:attribute name="DID" type="xs:ID"/>
+    <xs:attribute name="IID" type="xs:ID"/>
+    <xs:attribute name="CID" type="xs:ID"/>
+    <xs:attribute name="SID" type="xs:ID"/>
+    <xs:attribute name="MID" type="xs:ID"/>
+    <xs:attribute name="RID" type="xs:ID"/>
+
+    <xs:attribute name="dolgozó_CID" type="xs:IDREF"/>
+    <xs:attribute name="árul_CID" type="xs:IDREF"/>
+    <xs:attribute name="árul_SID" type="xs:IDREF"/>
+    <xs:attribute name="rendel_SID" type="xs:IDREF"/>
+    <xs:attribute name="rendel_MID" type="xs:IDREF"/>
+    <xs:attribute name="rendezvény_MID" type="xs:IDREF"/>
+    <xs:attribute name="rendezvény_CID" type="xs:IDREF"/>
+
+</xs:schema>
