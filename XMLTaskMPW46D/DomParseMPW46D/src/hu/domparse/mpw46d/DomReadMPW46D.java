@@ -13,6 +13,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
 
 public class DomReadMPW46D {
 
@@ -41,22 +42,37 @@ public class DomReadMPW46D {
 
 	private static void printElement(Element element, String indent) {
 		// jelenlegi elem
-		System.out.println(indent + "<" + element.getTagName() + ">");
+		System.out.print(indent + "<" + element.getTagName());
+
+		// az elem attribútumai
+		NamedNodeMap attributes = element.getAttributes();
+		for (int i = 0; i < attributes.getLength(); i++) {
+			Node attribute = attributes.item(i);
+			System.out.print(" " + attribute.getNodeName() + "=\"" + attribute.getNodeValue() + "\"");
+		}
 
 		// az elem gyermekelemei
 		NodeList children = element.getChildNodes();
-		for (int i = 0; i < children.getLength(); i++) {
-			Node child = children.item(i);
-			// ha a gyermekelem is tartalmaz elemet, akkor arra is meghívjuk a printElementet, ha nem, akkor kiírjuk a szöveget
-			if (child.getNodeType() == Node.ELEMENT_NODE) {
-				printElement((Element) child, indent + "  ");
-			} else if (child.getNodeType() == Node.TEXT_NODE && child.getNodeValue().trim().length() > 0) {
-				System.out.println(indent + "  " + child.getNodeValue().trim());
-			}
-		}
+		if (children.getLength() == 0) {
+			// ha nincsenek gyermekelemei, akkor záró taggel fejezzük be
+			System.out.println("/>");
+		} else {
+			// ha vannak gyermekelemei, akkor normális záró taggel folytatjuk
+			System.out.println(">");
 
-		// a jelenlegi elem záró tagje
-		System.out.println(indent + "</" + element.getTagName() + ">\n");
+			for (int i = 0; i < children.getLength(); i++) {
+				Node child = children.item(i);
+				// ha a gyermekelem is tartalmaz elemet, akkor arra is meghívjuk a printElementet, ha nem, akkor kiírjuk a szöveget
+				if (child.getNodeType() == Node.ELEMENT_NODE) {
+					printElement((Element) child, indent + "  ");
+				} else if (child.getNodeType() == Node.TEXT_NODE && child.getNodeValue().trim().length() > 0) {
+					System.out.println(indent + "  " + child.getNodeValue().trim());
+				}
+			}
+
+			// a jelenlegi elem záró tagje
+			System.out.println(indent + "</" + element.getTagName() + ">");
+		}
 	}
 
 	private static void writeXmlToFile(Document document, String outputFilePath) throws IOException {
@@ -71,10 +87,13 @@ public class DomReadMPW46D {
 					.newInstance();
 			javax.xml.transform.Transformer transformer = transformerFactory.newTransformer();
 
-			// az indentálás, a szóközök beállítása, az xml deklarációjának elvetése/meghagyása
-			//transformer.setOutputProperty(javax.xml.transform.OutputKeys.INDENT, "no");
-			//transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "1");
-			//transformer.setOutputProperty(javax.xml.transform.OutputKeys.OMIT_XML_DECLARATION, "yes");
+			// az indentálás, a szóközök beállítása, az xml deklarációjának
+			// elvetése/meghagyása
+			// transformer.setOutputProperty(javax.xml.transform.OutputKeys.INDENT, "no");
+			// transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount",
+			// "1");
+			// transformer.setOutputProperty(javax.xml.transform.OutputKeys.OMIT_XML_DECLARATION,
+			// "yes");
 
 			// a forrás (tehát a DOM) és a cél (az output) deklarálása
 			javax.xml.transform.dom.DOMSource source = new javax.xml.transform.dom.DOMSource(document);
