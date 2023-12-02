@@ -1,53 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <MPW46D_cukrászda xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="XMLSchemaMPW46D.xsd">
-    <dolgozó DID="" dolgozó_CID="">
-        <név></név>    
-        <fizetés></fizetés>
-        <beosztás></beosztás>
+
+    <!-- dolgozó példányok -->
+    <dolgozó DID="d1" dolgozó_CID="c1">
+        <név>Nagy Emese</név>    
+        <fizetés>300000</fizetés>
+        <beosztás>cukrász</beosztás>
     </dolgozó>
 
-    <igazgató IID="">
-        <név></név>    
-        <fizetés></fizetés>
-        <elérhetőség></elérhetőség>
+    <dolgozó DID="d2" dolgozó_CID="c1">
+        <név>Kiss Tamás</név>    
+        <fizetés>700000</fizetés>
+        <beosztás>főcukrász</beosztás>
+    </dolgozó>
+
+    <dolgozó DID="d3" dolgozó_CID="c1">
+        <név>Kovács Evelin</név>    
+        <fizetés>250000</fizetés>
+        <beosztás>cukrászgyakornok</beosztás>
+    </dolgozó>
+
+    <dolgozó DID="d4" dolgozó_CID="c2">
+        <név>Varga Levente</név>    
+        <fizetés>500000</fizetés>
+        <beosztás>cukrász</beosztás>
+    </dolgozó>
+
+    <dolgozó DID="d5" dolgozó_CID="c2">
+        <név>Sárosi Ferencné</név>    
+        <fizetés>800000</fizetés>
+        <beosztás>főcukrász</beosztás>
+    </dolgozó>
+
+    <dolgozó DID="d6" dolgozó_CID="c2">
+        <név>Nagy Andor</név>    
+        <fizetés>600000</fizetés>
+        <beosztás>cukrász</beosztás>
+    </dolgozó>
+
+    <dolgozó DID="d7" dolgozó_CID="c3">
+        <név>Nagy Andrea</név>    
+        <fizetés>900000</fizetés>
+        <beosztás>főcukrász</beosztás>
+    </dolgozó>
+
+    <dolgozó DID="d8" dolgozó_CID="c3">
+        <név>Tóth Tamás</név>    
+        <fizetés>600000</fizetés>
+        <beosztás>cukrász</beosztás>
+    </dolgozó>
+
+    <!-- igazgató példányok -->
+    <igazgató IID="c1">
+        <név>Farkas Benedek</név>    
+        <fizetés>1000000</fizetés>
+        <elérhetőség>farkas.benedek@gmail.com</elérhetőség>
+        <elérhetőség>+36201234567</elérhetőség>
     </igazgató>
 
-    <cukrászda CID="">
-        <név></név>
+    <igazgató IID="c2">
+        <név>Szőke László</név>    
+        <fizetés>2000000</fizetés>
+        <elérhetőség>+36702345645</elérhetőség>
+    </igazgató>
+
+    <igazgató IID="c3">
+        <név>Takács Ádám</név>    
+        <fizetés>1500000</fizetés>
+        <elérhetőség>+36705656789</elérhetőség>
+        <elérhetőség>adam.takacs@gmail.com</elérhetőség>
+    </igazgató>
+
+    <!-- cukrászda példányok -->
+    <cukrászda CID="c1">
+        <név>Kristály Cukrászda</név>
         <cím>
-            <város></város>
-            <irányítószám></irányítószám>
-            <utca></utca>
-            <házszám></házszám>
+            <város>Budapest</város>
+            <irányítószám>1082</irányítószám>
+            <utca>József krt.</utca>
+            <házszám>53</házszám>
         </cím>
     </cukrászda>
 
-    <árul árul_CID="" árul_SID=""></árul>
+    <cukrászda CID="c2">
+        <név>Daubner Cukrászda</név>
+        <cím>
+            <város>Budapest</város>
+            <irányítószám>1025</irányítószám>
+            <utca>Szépvölgyi út</utca>
+            <házszám>50</házszám>
+        </cím>
+    </cukrászda>
 
-    <sütemény SID="">
-        <név></név>
-        <egységár></egységár>
-        <allergének></allergének>
+    <cukrászda CID="c3">
+        <név>Kismandula Cukrászda</név>
+        <cím>
+            <város>Debrecen</város>
+            <irányítószám>4024</irányítószám>
+            <utca>Liszt Ferenc utca</utca>
+            <házszám>10</házszám>
+        </cím>
+    </cukrászda>
+
+    <!-- árul példányok -->
+    <árul árul_CID="c1" árul_SID="s1"></árul>
+    <árul árul_CID="c1" árul_SID="s2"></árul>
+    <árul árul_CID="c1" árul_SID="s3"></árul>
+    <árul árul_CID="c1" árul_SID="s4"></árul>
+    <árul árul_CID="c2" árul_SID="s1"></árul>
+    <árul árul_CID="c2" árul_SID="s2"></árul>
+    <árul árul_CID="c2" árul_SID="s3"></árul>
+    <árul árul_CID="c2" árul_SID="s4"></árul>
+    <árul árul_CID="c3" árul_SID="s1"></árul>
+    <árul árul_CID="c3" árul_SID="s2"></árul>
+    <árul árul_CID="c3" árul_SID="s3"></árul>
+    <árul árul_CID="c3" árul_SID="s4"></árul>
+
+    <!-- sütemény példányok -->
+    <sütemény SID="s1">
+        <név>Mindenmentes süti</név>
+        <egységár>3000</egységár>
     </sütemény>
 
-    <rendel rendel_SID="" rendel_MID="">
-        <darabszám></darabszám>
-        <összeg></összeg>
+    <sütemény SID="s2">
+        <név>kókuszos kocka</név>
+        <egységár>600</egységár>
+        <allergének>tojás</allergének>
+        <allergének>tej</allergének>
+        <allergének>liszt</allergének>
+    </sütemény>
+
+    <sütemény SID="s3">
+        <név>csokis szelet</név>
+        <egységár>700</egységár>
+        <allergének>liszt</allergének>
+        <allergének>tojás</allergének>
+    </sütemény>
+
+    <sütemény SID="s4">
+        <név>Madeira sütemény</név>
+        <egységár>900</egységár>
+        <allergének>liszt</allergének>
+        <allergének>tej</allergének>
+        <allergének>tojás</allergének>
+        <allergének>sajt</allergének>
+    </sütemény>
+
+    <!-- rendel példányok -->
+    <rendel rendel_SID="s1" rendel_MID="m1">
+        <darabszám>30</darabszám>
     </rendel>
 
-    <megrendelő MID="">
-        <név></név>
-        <elérhetőség></elérhetőség>    
+    <rendel rendel_SID="s4" rendel_MID="m2">
+        <darabszám>20</darabszám>
+    </rendel>
+
+    <rendel rendel_SID="s3" rendel_MID="m3">
+        <darabszám>50</darabszám>
+    </rendel>
+
+    <!-- megrendelő példányok -->
+    <megrendelő MID="m1">
+        <név>Kiss Lászlóné</név>
+        <elérhetőség>+36203453434</elérhetőség>    
     </megrendelő>
 
-    <rendezvény RID="" rendezvény_MID="" rendezvény_CID="">
-        <kezdés></kezdés>
+    <megrendelő MID="m2">
+        <név>Horváth Csaba</név>
+        <elérhetőség>+36305675656</elérhetőség>    
+    </megrendelő>
+
+    <megrendelő MID="m3">
+        <név>Remete Ákos</név>
+        <elérhetőség>+36204557887</elérhetőség>    
+    </megrendelő>
+
+    <!-- rendezvény példányok -->
+    <rendezvény RID="r1" rendezvény_MID="m1" rendezvény_CID="c1">
+        <kezdés>2023-12-12 16:00</kezdés>
         <helyszín>
-            <város></város>
-            <irányítószám></irányítószám>
-            <utca></utca>
-            <házszám></házszám>
+            <város>Budapest</város>
+            <irányítószám>1181</irányítószám>
+            <utca>Városház utca</utca>
+            <házszám>1</házszám>
+        </helyszín>    
+    </rendezvény>
+
+    <rendezvény RID="r2" rendezvény_MID="m2" rendezvény_CID="c1">
+        <kezdés>2023-12-21 18:00</kezdés>
+        <helyszín>
+            <város>Budapest</város>
+            <irányítószám>1119</irányítószám>
+            <utca>Fehérvári út</utca>
+            <házszám>47</házszám>
+        </helyszín>    
+    </rendezvény>
+
+    <rendezvény RID="r3" rendezvény_MID="m3" rendezvény_CID="c2">
+        <kezdés>2023-12-29 19:00</kezdés>
+        <helyszín>
+            <város>Budapest</város>
+            <irányítószám>1133</irányítószám>
+            <utca>Kárpát utca</utca>
+            <házszám>23</házszám>
         </helyszín>    
     </rendezvény>
 

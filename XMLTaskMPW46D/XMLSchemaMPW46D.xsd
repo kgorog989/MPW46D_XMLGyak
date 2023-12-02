@@ -14,10 +14,17 @@
     <xs:element name="házszám" type="xs:string"/>
     <xs:element name="egységár" type="xs:int"/>
     <xs:element name="allergének" type="xs:string"/>
-    <xs:element name="darabszám" type="xs:int"/>
-    <xs:element name="összeg" type="xs:int"/>
     <xs:element name="kezdés" type="xs:string"/>
 
+    <xs:element name="darabszám">
+        <xs:simpleType>
+            <xs:restriction base="xs:int">
+            <xs:minInclusive value="10"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+<!-- komplex típusok-->
 
 <xs:element name="MPW46D_cukrászda">
     <xs:complexType>
@@ -34,6 +41,7 @@
     </xs:complexType>
 </xs:element>
 
+<!-- saját típusok-->
 
 <xs:complexType name="dolgozóTipus">
     <xs:sequence>
@@ -79,7 +87,7 @@
 <xs:complexType name="rendelTipus">
     <xs:sequence>
         <xs:element ref="darabszám"/>
-        <xs:element ref="összeg"/>
+        <xs:element name="összeg" type="xs:int" minOccurs="0" maxOccurs="1"/>
     </xs:sequence>
     <xs:attribute ref="rendel_SID"/>
     <xs:attribute ref="rendel_MID"/>
@@ -115,7 +123,6 @@
 <!-- kulcsok-->
 
     <xs:attribute name="DID" type="xs:ID"/>
-    <xs:attribute name="IID" type="xs:ID"/>
     <xs:attribute name="CID" type="xs:ID"/>
     <xs:attribute name="SID" type="xs:ID"/>
     <xs:attribute name="MID" type="xs:ID"/>
@@ -129,4 +136,6 @@
     <xs:attribute name="rendezvény_MID" type="xs:IDREF"/>
     <xs:attribute name="rendezvény_CID" type="xs:IDREF"/>
 
+    <!--1:1 kapcsolat megvalósítása-->
+    <xs:attribute name="IID" type="xs:IDREF"/>
 </xs:schema>
