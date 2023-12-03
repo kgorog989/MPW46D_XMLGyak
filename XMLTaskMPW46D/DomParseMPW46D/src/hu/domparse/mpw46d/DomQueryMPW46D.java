@@ -72,7 +72,7 @@ public class DomQueryMPW46D {
                     String sidValue = rendelElement.getAttribute("rendel_SID");
 
                     // a megfelelő értékű sütemény elem
-                    Element sutemenyElement = getSutemenyElement(doc, sidValue);
+                    Element sutemenyElement = findElementByAttribute(doc, "sütemény", "SID", sidValue);
 
                     // a sütemény nevének lekérdezése és kiíratása
                     Element nevElement = (Element) sutemenyElement.getElementsByTagName("név").item(0);
@@ -115,25 +115,46 @@ public class DomQueryMPW46D {
                 }
             }
 
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+            // annak az igazgatónak a neve, aki azt a cukrászdát igazgatja, amelyik az r1 rendezvényre készít süteményeket
+            System.out.println("\nIgazgató az r1 rendezvényre süteményt készítő cukrászdánál: ");
 
-    // a sütemény lekérése SID alapján
-    private static Element getSutemenyElement(Document document, String sid) {
-        NodeList sutemenyList = document.getElementsByTagName("sütemény");
+            // r1-es rendezvény megkeresése
+            Element rendezvenyElement = findElementByAttribute(doc, "rendezvény", "RID", "r1");
 
-        for (int i = 0; i < sutemenyList.getLength(); i++) {
-            Node node = sutemenyList.item(i);
+            // a r1 cukrászda_CID-je
+            String cukraszdaCID = rendezvenyElement.getAttribute("rendezvény_CID");
+
+            // az ennek megfelelő cukrászda
+            Element cukraszdaElement = findElementByAttribute(doc, "cukrászda", "CID", cukraszdaCID);
+
+            // az igazgatóhoz szükséges CID
+            String igazgatoCID = cukraszdaElement.getAttribute("CID");
+
+            // a megfelelő IID-jű igazgató nevének kiírása
+            Element igazgatoElement = findElementByAttribute(doc, "igazgató", "IID", igazgatoCID);
+            Element nevElement = (Element) igazgatoElement.getElementsByTagName("név").item(0);
+            System.out.println("Név: " + nevElement.getTextContent());
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    // az attribútumnak megfelelő elem megkeresése
+    private static Element findElementByAttribute(Document document, String elementName, String attributeName, String attributeValue) {
+        NodeList nodeList = document.getElementsByTagName(elementName);
+
+        for (int i = 0; i < nodeList.getLength(); i++) {
+            Node node = nodeList.item(i);
             if (node.getNodeType() == Node.ELEMENT_NODE) {
                 Element element = (Element) node;
-                if (element.getAttribute("SID").equals(sid)) {
+
+                if (attributeValue.equals(element.getAttribute(attributeName))) {
                     return element;
                 }
             }
         }
 
-        return null; // nullot dob, ha nem találta a süteményt
+        return null;
     }
 }
