@@ -1,0 +1,11 @@
+{
+    "java.project.sourcePaths": [
+        "XMLTaskMPW46D/DomParseMPW46D/src",
+        "MPW46D_1122/xPathMPW46D/src",
+        "MPW46D_1115/DomQueryMPW46D/src",
+        "MPW46D_1115/DomModifyMPW46D/src",
+        "MPW46D_1108/DomParseMPW46D/src",
+        "MPW46D_1025/SaxMPW46D/src",
+        "MPW46D_1122/xPathMPW46D_2/src"
+    ]
+}
