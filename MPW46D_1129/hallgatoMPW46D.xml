@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<class xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="studentMPW46D.xsd">
-    <student id="01">
+<class>
+   <student id="01">
         <keresztnev>Krisztina Erzsébet</keresztnev>
         <vezeteknev>Görög</vezeteknev>
         <becenev>Kriszti</becenev>
