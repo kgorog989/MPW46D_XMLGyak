@@ -39,6 +39,69 @@
             <xs:element name="rendezvény" type="rendezvényTipus" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
+    
+    <!-- Kulcsok megvalósítása -->
+    <xs:key name="dolgozoKey">
+        <xs:selector xpath=".//dolgozó"/>
+        <xs:field xpath="@DID"/>
+    </xs:key>
+    <xs:key name="igazgatoKey">
+        <xs:selector xpath=".//igazgató"/>
+        <xs:field xpath="@IID"/>
+    </xs:key>
+    <xs:key name="cukraszdaKey">
+        <xs:selector xpath=".//cukrászda"/>
+        <xs:field xpath="@CID"/>
+    </xs:key>
+    <xs:key name="sutemenyKey">
+        <xs:selector xpath=".//sütemény"/>
+        <xs:field xpath="@SID"/>
+    </xs:key>
+    <xs:key name="megrendeloKey">
+        <xs:selector xpath=".//megrendelő"/>
+        <xs:field xpath="@MID"/>
+    </xs:key>
+    <xs:key name="rendezvenyKey">
+        <xs:selector xpath=".//rendezvény"/>
+        <xs:field xpath="@RID"/>
+    </xs:key>
+
+    <!-- Idegenkulcsok megvalósítása -->
+    <xs:keyref name="dolgozoKeyRef" refer="cukraszdaKey">
+        <xs:selector xpath=".//dolgozó"/>
+        <xs:field xpath="@dolgozó_CID"/>
+    </xs:keyref>
+    <xs:keyref name="arulCukraszdaKeyRef" refer="cukraszdaKey">
+        <xs:selector xpath=".//árul"/>
+        <xs:field xpath="@árul_CID"/>
+    </xs:keyref>
+    <xs:keyref name="arulSutemenyKeyRef" refer="sutemenyKey">
+        <xs:selector xpath=".//árul"/>
+        <xs:field xpath="@árul_SID"/>
+    </xs:keyref>
+    <xs:keyref name="rendelSutemenyKeyRef" refer="sutemenyKey">
+        <xs:selector xpath=".//rendel"/>
+        <xs:field xpath="@rendel_SID"/>
+    </xs:keyref>
+    <xs:keyref name="rendelMegrendeloKeyRef" refer="megrendeloKey">
+        <xs:selector xpath=".//rendel"/>
+        <xs:field xpath="@rendel_MID"/>
+    </xs:keyref>
+    <xs:keyref name="rendezvenyMegrendeloKeyRef" refer="megrendeloKey">
+        <xs:selector xpath=".//rendezvény"/>
+        <xs:field xpath="@rendezvény_MID"/>
+    </xs:keyref>
+
+    <xs:keyref name="rendezvenyCukraszdaKeyRef" refer="cukraszdaKey">
+        <xs:selector xpath=".//rendezvény"/>
+        <xs:field xpath="@rendezvény_CID"/>
+    </xs:keyref>
+
+    <!-- 1:1 kapcsolat-->
+    <xs:unique name="igazgatoKeyUnique">
+        <xs:selector xpath=".//igazgató"/>
+        <xs:field xpath="@CID"/>
+    </xs:unique>
 </xs:element>
 
 <!-- saját típusok-->
