@@ -1,0 +1,112 @@
+{
+    "MPW46D_kurzusfelvetel": {
+      "hallgato": {
+        "hnev": "Görög Krisztina Erzsébet",
+        "szulev": "2002-06-14",
+        "szak": "programtervező informatikus"
+      },
+      "kurzusok": {
+        "kurzus": [
+          {
+            "kurzusnev": "WEB technológiák I.",
+            "kredit": 5,
+            "hely": "XXX.",
+            "idopont": {
+              "nap": "hétfő",
+              "kezdopont": 14,
+              "vegpont": 16
+            },
+            "oktato": "Dr. Agárdi Anita"
+          },
+          {
+            "kurzusnev": "WEB technológiák I.",
+            "kredit": 5,
+            "hely": "inf/202.",
+            "idopont": {
+              "nap": "hétfő",
+              "kezdopont": 16,
+              "vegpont": 18
+            },
+            "oktato": "Dr. Agárdi Anita"
+          },
+          {
+            "kurzusnev": "Mesterséges intelligencia",
+            "kredit": 5,
+            "hely": "XXXII.",
+            "idopont": {
+              "nap": "kedd",
+              "kezdopont": 10,
+              "vegpont": 12
+            },
+            "oktato": "Kunné Dr. Tamás Judit"
+          },
+          {
+            "kurzusnev": "Adatkezelés XML-ben",
+            "kredit": 5,
+            "hely": "XXXII.",
+            "idopont": {
+              "nap": "kedd",
+              "kezdopont": 12,
+              "vegpont": 14
+            },
+            "oktato": "Dr. Bednarik László"
+          },
+          {
+            "kurzusnev": "Algoritmusok és vizsgálatuk",
+            "kredit": 5,
+            "hely": "A1/320.",
+            "idopont": {
+              "nap": "kedd",
+              "kezdopont": 14,
+              "vegpont": 18
+            },
+            "oktato": "Dr. Házy Attila"
+          },
+          {
+            "kurzusnev": "Adatkezelés XML-ben",
+            "kredit": 5,
+            "hely": "inf/103.",
+            "idopont": {
+              "nap": "szerda",
+              "kezdopont": 12,
+              "vegpont": 14
+            },
+            "oktato": "Dr. Bednarik László"
+          },
+          {
+            "kurzusnev": "Vállalati információs rendszerek fejlesztése",
+            "kredit": 5,
+            "hely": "inf/101.",
+            "idopont": {
+              "nap": "szerda",
+              "kezdopont": 14,
+              "vegpont": 16
+            },
+            "oktato": "Dr. Sasvári Péter"
+          },
+          {
+            "kurzusnev": "Vállalati információs rendszerek fejlesztése",
+            "kredit": 5,
+            "hely": "inf/101.",
+            "idopont": {
+              "nap": "szerda",
+              "kezdopont": 18,
+              "vegpont": 20
+            },
+            "oktato": "Dr. Sasvári Péter"
+          },
+          {
+            "kurzusnev": "Mesterséges intelligencia",
+            "kredit": 5,
+            "hely": "I.",
+            "idopont": {
+              "nap": "csütörtök",
+              "kezdopont": 10,
+              "vegpont": 12
+            },
+            "oktato": "Fazekas Levente"
+          }
+        ]
+      }
+    }
+  }
