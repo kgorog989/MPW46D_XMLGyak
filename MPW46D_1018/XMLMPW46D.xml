@@ -1,54 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Fesztivál_MPW46D xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="XMLSchemaMPW46D.xsd">
-    <Fesztivál FESZ_ID="">
-        <név></név>
-        <helyszín></helyszín>
-        <év></év>
+    <!-- fesztivál példányok -->
+    <Fesztivál FESZ_ID="f1">
+        <név>Sziget Fesztivál</név>
+        <helyszín>Budapest, Május 9. park</helyszín>
+        <év>2023</év>
     </Fesztivál>
 
-    <Fellépő FEL_ID="" FESZ_IDREF="">
-        <név></név>
-        <ország></ország>
-        <díj></díj>
+    <Fesztivál FESZ_ID="f2">
+        <név>Balaton Sound</név>
+        <helyszín>Zamárdi</helyszín>
+        <év>2023</év>
+    </Fesztivál>
+
+    <!-- fellépő példányok -->
+    <Fellépő FEL_ID="fel1" FESZ_IDREF="f1">
+        <név>Billie Eilish</név>
+        <ország>USA</ország>
+        <díj>600</díj>
     </Fellépő>
 
-    <Tulajdonos T_ID="">
-        <név></név>
-        <adószám></adószám>
-        <alapítás></alapítás>
-        <bevétel></bevétel>
+    <Fellépő FEL_ID="fel2" FESZ_IDREF="f1">
+        <név>Imagine Dragons</név>
+        <ország>USA</ország>
+        <díj>680</díj>
+    </Fellépő>
+
+    <Fellépő FEL_ID="fel3" FESZ_IDREF="f2">
+        <név>Dj. Tiësto</név>
+        <ország>Hollandia</ország>
+        <díj>400</díj>
+    </Fellépő>
+
+    <Fellépő FEL_ID="fel4" FESZ_IDREF="f2">
+        <név>Dimitri Vegas and Like Mike</név>
+        <ország>Belgium</ország>
+        <díj>300</díj>
+    </Fellépő>
+
+    <!-- tulajdonos példányok -->
+    <Tulajdonos T_ID="f1">
+        <név>Gerendai Károly</név>
+        <adószám>1245238646</adószám>
+        <alapítás>1993</alapítás>
+        <bevétel>9 milliárd</bevétel>
     </Tulajdonos>
 
-    <Résztvevő R_ID="" FESZ_IDREF="">
-        <név></név>
-        <diákigazolvány></diákigazolvány>
+    <Tulajdonos T_ID="f2">
+        <név>Lobenwein Norbert</név>
+        <adószám>143436784</adószám>
+        <alapítás>2007</alapítás>
+        <bevétel>7 milliárd</bevétel>
+    </Tulajdonos>
+
+    <!-- résztvevő példányok -->
+    <Résztvevő R_ID="r1" FESZ_IDREF="f1">
+        <név>Nagy Zoltán</név>
+        <diákigazolvány>72349878825</diákigazolvány>
         <lakcím>
-            <település></település>    
-            <utca></utca>
-            <házszám></házszám>
+            <település>Budapest</település>    
+            <utca>Kossuth utca</utca>
+            <házszám>43</házszám>
         </lakcím>
     </Résztvevő>
 
-    <közvélemény K_ID="" R_IDREF="" NY_IDREF="">
-        <kérdező></kérdező>
+    <Résztvevő R_ID="r2" FESZ_IDREF="f2">
+        <név>Kiss Evelin</név>
+        <diákigazolvány>72879112722</diákigazolvány>
+        <lakcím>
+            <település>Balatonfüred</település>    
+            <utca>Szív út</utca>
+            <házszám>16</házszám>
+        </lakcím>
+    </Résztvevő>
+
+    <!-- közvélemény példányok -->
+    <közvélemény K_ID="k1" R_IDREF="r1" NY_IDREF="n1">
+        <kérdező>Horváth Ádám</kérdező>
     </közvélemény>
 
-    <Nyelvtudás NY_ID="">
-        <nyelv></nyelv>    
-        <szint></szint>
+    <közvélemény K_ID="k2" R_IDREF="r2" NY_IDREF="n2">
+        <kérdező>Kovács Péter</kérdező>
+    </közvélemény>
+
+    <!-- nyelvtudás példányok -->
+    <Nyelvtudás NY_ID="n1">
+        <nyelv>angol</nyelv>    
+        <szint>B2</szint>
     </Nyelvtudás>
 
-    <Alkalmazott A_ID="" B_IDREF="">
-        <név></név>
-        <műszak></műszak>
-        <fizetés></fizetés>
+    <Nyelvtudás NY_ID="n2">
+        <nyelv>német</nyelv>    
+        <szint>B2</szint>
+    </Nyelvtudás>
+
+    <!-- alkalmaozott példányok -->
+    <Alkalmazott A_ID="a1" B_IDREF="b1">
+        <név>Szűcs Kinga</név>
+        <műszak>nappali</műszak>
+        <fizetés>500000</fizetés>
     </Alkalmazott>
 
-    <Bár B_ID="" FESZ_IDREF="">   
-        <név></név>
-        <ital></ital>
-        <cég></cég>
+    <Alkalmazott A_ID="a2" B_IDREF="b2">
+        <név>Tímár Melinda</név>
+        <műszak>esti</műszak>
+        <fizetés>600000</fizetés>
+    </Alkalmazott>
+
+    <!-- bár példányok -->
+    <Bár B_ID="b1" FESZ_IDREF="f1">   
+        <név>Csillag Bár</név>
+        <ital>vodka</ital>
+        <ital>wisky</ital>
+        <ital>botr</ital>
+        <ital>pálinka</ital>
+        <cég>Csillag Bár Kft.</cég>
+    </Bár>
+
+    <Bár B_ID="b2" FESZ_IDREF="f2">   
+        <név>Sörbár</név>
+        <ital>koktél</ital>
+        <ital>sör</ital>
+        <cég>Sörbár 2005 Kft.</cég>
     </Bár>
 
 </Fesztivál_MPW46D>
