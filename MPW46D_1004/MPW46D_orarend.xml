@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<orarend xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="MPW46D_orarend.xsd">
+<MPW46D_orarend xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="MPW46D_orarend.xsd">
 
 <!--!DOCTYPE MPW46D_orarend SYSTEM "MPW46D_orarend.dtd"-->
 
-<MPW46D_orarend>
     <ora kod="1" tipus="elmelet">
         <kurzusnev>WEB technológiák</kurzusnev>
         <idopont>
@@ -114,4 +113,3 @@
     </ora>
 
 </MPW46D_orarend>
-</orarend>
