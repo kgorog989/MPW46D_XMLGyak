@@ -113,23 +113,35 @@ public class DomModifyMPW46D {
 		NodeList children = element.getChildNodes();
 		if (children.getLength() == 0) {
 			// ha nincsenek gyermekelemei, akkor záró taggel fejezzük be
-			System.out.println("/>");
+			System.out.print("/>");
 		} else {
 			// ha vannak gyermekelemei, akkor normális záró taggel folytatjuk
-			System.out.println(">");
+			System.out.print(">");
+
+			boolean hasTextContent = false;
 
 			for (int i = 0; i < children.getLength(); i++) {
 				Node child = children.item(i);
-				// ha a gyermekelem is tartalmaz elemet, akkor arra is meghívjuk a printElementet, ha nem, akkor kiírjuk a szöveget
+
+				// ha a gyermekelem is tartalmaz elemet, akkor arra is meghívjuk a
+				// printElementet, ha nem, akkor kiírjuk a szöveget
 				if (child.getNodeType() == Node.ELEMENT_NODE) {
-					printElement((Element) child, indent + "  ");
+					// ha van gyermeke új sorban folytatjuk, majd meghívjuk rá is a függvényt
+					System.out.println();
+					printElement((Element) child, indent + "\t");
+					hasTextContent = false;
 				} else if (child.getNodeType() == Node.TEXT_NODE && child.getNodeValue().trim().length() > 0) {
-					System.out.println(indent + "  " + child.getNodeValue().trim());
+					System.out.print(child.getNodeValue().trim());
+					hasTextContent = true;
 				}
 			}
 
 			// a jelenlegi elem záró tagje
-			System.out.println(indent + "</" + element.getTagName() + ">");
+			if (hasTextContent) {
+				System.out.print("</" + element.getTagName() + ">");
+			} else {
+				System.out.print("\n" + indent + "</" + element.getTagName() + ">");
+			}
 		}
 	}
 
